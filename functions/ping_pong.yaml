@@ -1,0 +1,16 @@
+id: QmQ5Nz1xt3oyMTubqov5F2s2wFnSCusLcmeHtGSP46M7uN
+description: Returns pong to a ping over http
+tags: []
+trigger:
+    type: https
+    method: GET
+    paths:
+        - /ping
+domains:
+    - test
+includes:
+    - /functions/ping_pong.go
+execution:
+    timeout: 10s
+    memory: 10MB
+    call: ping
